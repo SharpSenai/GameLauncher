@@ -3,7 +3,7 @@ from libs import *
 """"
 TODO: {
     
-    - Fazer o BackEnd (Thaue, José e Adrian)
+    - Fazer o BackEnd (Thaue, José e Adrian)        
     - Fazer o FrontEnd (Lucas, Adrian)
     - Instalar todas as Dependencias
     - Planejar certinho todo o projeto nosso
@@ -47,6 +47,12 @@ class registro():
         self.data_Nascimento = _data_Nascimento
         self.senha=_senha
         self.senha_confirm=_senha_confirm
+
+
+# exemplo de login , caso o usuario ja tenha  conta 
+
+    def escolha2():
+
         
 
 
