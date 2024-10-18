@@ -1,3 +1,17 @@
+"""
+    Importações de diversas bibliotecas;
+    (Biblioteca - Propósito no projeto)
+    --------------------------------------------------------------------
+    Time - Pegar tempo, horário;
+    Numpy - Operações matemáticas entre arrays;
+    PySide6 - Biblioteca Gráfica, usaremos para rodar jogos HTML;
+    CustomTKInter - Biblioteca Gráfica, usaremos para a interface;
+    Seaborn - Biblioteca para gráficos;
+    Requests - Biblioteca para HTTP Requests;
+    SQLite3 - Biblioteca para banco de dados SQL;
+    Math - Biblioteca para operações matemáticas.
+"""
+
 import time as Lib_Time
 import numpy as Lib_Numpy
 import PySide6 as Lib_PySide

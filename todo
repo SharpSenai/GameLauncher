@@ -1,0 +1,36 @@
+TODO: {
+    
+    - Fazer o BackEnd (Thaue, José e Adrian)        
+    - Fazer o FrontEnd (Lucas, Adrian)
+    - Instalar todas as Dependencias
+    - Planejar certinho todo o projeto nosso
+    
+    BACKEND {
+    
+        Sistema da DataBase:
+            - Login/cadastro
+            - Registro de Jogos (Nome, Descrição, Imagem, Preço, Tamanho, Categoria, Tipo)
+            - Armazenamento de jogos
+    }
+    
+    FRONT-END {
+        Registro de Usuario { 
+            - Tudo relacionado ao cadastro + Tab switch de registro pra login
+        }
+        
+        O USO DE TAB SWITCH VAI SER NECESSÁRIO PRA FAZER AS TROCAS DE FRAMES TELAS
+        
+    }
+}
+
+# Adrian:
+- Implementação da Interface Geral usando CTKinter;
+
+# Lucas:
+- Implementação da Interface Geral usando CTKInter e ajudando na idealização do projeto; 
+
+# Thaue:
+- Estudar SQL e Trabalhar no BackEnd;
+
+# José:
+- Estudar SQL, Trabalhar no BackEnd e planejamento geral do projeto;
