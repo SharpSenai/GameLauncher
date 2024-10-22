@@ -18,10 +18,24 @@ class BancoDeDados:
         if self.Connex:
             self.Connex.close()
             print("Banco de dados desconectado.")
+    
+    def salvarBanco(self):
+        if self.Connex:
+            self.Connex.commit()
+            print("Banco de dados Salvo.")
+
+    def inserirBanco(self, valores):
+        query = f"INSERT INTO PerfilUsuario ()"
         
     def criarTabelas(self):
-        self.Cursor.execute("CREATE TABLE PerfilUsuario(nome, email, senha)")
-        self.desconectarBanco()
+        
+        self.Cursor.execute("""CREATE TABLE IF NOT EXISTS PerfilUsuario(
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            nome TEXT NOT NULL,
+            email TEXT NOT NULL,
+            senha TEXT NOT NULL
+            )""")
+        
         print("Tabela Criada.")
         
 banco = BancoDeDados()

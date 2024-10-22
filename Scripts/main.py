@@ -1,32 +1,5 @@
 from libs import *
-
-""""
-TODO: {
-    
-    - Fazer o BackEnd (Thaue, José e Adrian)        
-    - Fazer o FrontEnd (Lucas, Adrian)
-    - Instalar todas as Dependencias
-    - Planejar certinho todo o projeto nosso
-    
-    BACKEND {
-    
-        Sistema da DataBase:
-            - Login/cadastro
-            - Registro de Jogos (Nome, Descrição, Imagem, Preço, Tamanho, Categoria, Tipo)
-            - Armazenamento de jogos
-    }
-    
-    FRONT-END {
-        Registro de Usuario { 
-            - Tudo relacionado ao cadastro + Tab switch de registro pra login
-        }
-        
-        O USO DE TAB SWITCH VAI SER NECESSÁRIO PRA FAZER AS TROCAS DE FRAMES TELAS
-        
-    }
-}
-
-"""
+from Objects import bancodados
 
 # rascunho de login/cadastro 
 
@@ -73,18 +46,12 @@ class registro1():
             self.senha = input("Digite sua senha: ")
             if input("Digite novamente sua senha: ") != self.senha:
                 Senha()
-      
 
 
 
 
 # exemplo de login , caso o usuario ja tenha  conta 
-
-    def escolha2():
-
-        
-
-
-def main():
-    pass
-
+        def Login():
+            _email = input ("digite seu Email")
+            if input("Digite a senha correta: ") == self.senha:
+                print("Você logou")
