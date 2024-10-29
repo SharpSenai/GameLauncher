@@ -14,6 +14,7 @@
     Json - Para interagir com arquivos .json;
     Subprocess - Para interagir com o processo do usuário;
     Git - Interações GIT.
+    Shutil - Operações de manipulação de arquivos e diretórios.
 """
 
 import time as Lib_Time
@@ -28,5 +29,6 @@ import os as Lib_OS
 import json as Lib_Json
 import subprocess as Lib_Subprocess
 import git as Lib_Git
+import shutil as Lib_Shutil
 
 
