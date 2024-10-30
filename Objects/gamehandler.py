@@ -1,10 +1,11 @@
 from libs import *
 from Objects.pySideUI import GameWindow
 
+'''
 def criar_EstruturaTemp(path_tempClone, repo_Url):
     if Lib_OS.path.exists(path_tempClone):
         Lib_Shutil.rmtree(path_tempClone)
-        
+    
     Lib_Git.Repo.clone_from(repo_Url, path_tempClone)
     
     Estrutura = []
@@ -40,6 +41,7 @@ def sincronizar_Repositorio(local_Path, repo_Url):
         repo.git.pull()
     else:
         print("Já atualizado!")
+'''
 
 class gameHandler():
     
@@ -48,12 +50,12 @@ class gameHandler():
         self.folder_ToDownload = None
         self.json_Path = Lib_OS.path.join(Lib_OS.path.dirname(__file__),"..","Scripts","gameid.json")
         self.clone_Repository()
+        self.gameWindow = None
     
-    def loadGame(self):
-        
-        newGame = GameWindow("2048","GamesDownloaded\\21-2048-Game")
-        
-        pass
+    def loadGame(self, gameName):
+        gamePath = Lib_OS.path.abspath(f"GamesDownloaded\\html-css-javascript-games\\{gameName}\\index.html")
+        self.gameWindow = GameWindow("2048",gamePath)
+        self.gameWindow.show()
     
     def clone_Repository(self): 
         with open(self.json_Path, "r") as json_File:
@@ -70,12 +72,12 @@ class gameHandler():
             
             if Lib_OS.path.exists(repo_Path): 
                 print(f"{url} já baixado, continuando..")
-                sincronizar_Repositorio(repo_Path, url)
                 continue
             else:
                 try:
                     Lib_OS.makedirs(repo_Path, exist_ok=True)
-                    sincronizar_Repositorio(repo_Path, url)
+                    Lib_Git.Repo.clone_from(url, repo_Path)
+                    #sincronizar_Repositorio(repo_Path, url)
                     print(f"Clonando {url}...")
                 except Exception as e:
                     print(f"Erro ao clonar: {url}: {e} | continuando...")
